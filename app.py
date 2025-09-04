@@ -29,6 +29,11 @@ for i in responses:
 
 @app.route("/")
 def magic_eight_ball():
-    answer = random.choice(responses)
-    print(answer)
-    return render_template("index.html", answer=answer)
+    answer = None
+    question = None
+
+    if request.method == "POST":
+        question = request.form.get("question")
+        answer = random.choice(responses)
+    
+    return render_template("index.html", answer=answer, question=question)

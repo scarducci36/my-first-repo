@@ -5,11 +5,17 @@
     </head>
 
     <body>
-        <h1>Your Magic Eight Ball Says:</h1>
-        <h2>{{answer}}</h2>
+        <h1>Ask Anything...</h1>
 
-        <form method="get" action="/">
-            <button type="submit">Ask Again</button>
+        <form method="post" action="/">
+            <input type="text" name="question" placeholder="Type your question" required>
+            <button type="submit">Ask</button>
         </form>
+
+        {% if question %}
+            <h3>You Asked: "{{ question }}"</h3>
+            <h2>The Magic Eight Ball says: {{answer}}</h2>
+        {% endif %}
+        
     </body>
 </html>
