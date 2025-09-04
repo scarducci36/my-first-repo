@@ -6,26 +6,29 @@
 # python -m venv venv 
 # venv\Scripts\activate
 # pip install Flask
-
 from flask import Flask 
+import random
 
 app = Flask(__name__)
 
 # Creating a list of possible responses for the eight ball 
 
 responses = [
-    "Yes, definately!"
-    "Ask again later"
-    "No way!"
-    "It is certain."
-    "Very doubtful."
+    "Yes, definately!",
+    "Ask again later.",
+    "No way!",
+    "It is certain.",
+    "Very doubtful.",
     "Better not tell you now."
 ]
 
+for i in responses:
+    print(i, "\n")
+
 # Then use Python's random.choice() to pick one: 
-import random
 
 @app.route("/")
 def magic_eight_ball():
     answer = random.choice(responses)
+    print(answer)
     return f"<h1>{answer}</h1>"
