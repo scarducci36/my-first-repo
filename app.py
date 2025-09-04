@@ -6,7 +6,7 @@
 # python -m venv venv 
 # venv\Scripts\activate
 # pip install Flask
-from flask import Flask 
+from flask import Flask, render_template
 import random
 
 app = Flask(__name__)
@@ -31,4 +31,4 @@ for i in responses:
 def magic_eight_ball():
     answer = random.choice(responses)
     print(answer)
-    return f"<h1>{answer}</h1>"
+    return render_template("index.html", answer=answer)
