@@ -1,1 +1,4 @@
 Hello, my name is Stephanie and I am learning how to use GitHub. 
+
+Now I have learned how to connect Github and Visual Studio Code so that I can make changes and commit and push them to Github directly!
+
