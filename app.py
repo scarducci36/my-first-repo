@@ -11,13 +11,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
-def homeo():
-    return "Hello World!"
-
 # Creating a list of possible responses for the eight ball 
 
-repsonses = [
+responses = [
     "Yes, definately!"
     "Ask again later"
     "No way!"
@@ -27,8 +23,9 @@ repsonses = [
 ]
 
 # Then use Python's random.choice() to pick one: 
-
 import random
 
-answer = random.choice(repsonses)
-print(answer)
+@app.route("/")
+def magic_eight_ball():
+    answer = random.choice(responses)
+    return f"<h1>{answer}</h1>"
