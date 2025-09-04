@@ -3,20 +3,23 @@
 <html>
     <head>
         <title>Magic Eight Ball</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     </head>
 
     <body>
-        <h1>Ask Anything...</h1>
+        <div class="ball">
+            <div class="window">
+                {% if answer %}
+                    {{answer}}
+                {% else %}
+                    Ask me anything!
+                {% endif %}
+            </div>
+        </div>
 
         <form method="post" action="/">
             <input type="text" name="question" placeholder="Type your question" required>
             <button type="submit">Ask</button>
         </form>
-
-        {% if question %}
-            <h3>You Asked: "{{ question }}"</h3>
-            <h2>The Magic Eight Ball says: {{answer}}</h2>
-        {% endif %}
-
     </body>
 </html>
