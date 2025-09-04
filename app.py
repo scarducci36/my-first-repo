@@ -27,12 +27,13 @@ for i in responses:
 
 # Then use Python's random.choice() to pick one: 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def magic_eight_ball():
     answer = None
     question = None
 
     if request.method == "POST":
+        print("Question posted by user.")
         question = request.form.get("question")
         answer = random.choice(responses)
     
