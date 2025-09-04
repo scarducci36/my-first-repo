@@ -34,10 +34,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: red;
+    color: white;
     font-weight: bold;
     text-align: center;
     padding-top: 50px; /* space inside triangle */
+    line-height: normal
 }
 
 .window span {
