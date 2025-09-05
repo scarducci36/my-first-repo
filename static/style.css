@@ -10,6 +10,12 @@ body {
     text-align: center; 
 }
 
+.title {
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: aquamarine;
+}
+
 .ball {
     display: flex;
     justify-content: center;
