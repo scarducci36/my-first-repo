@@ -11,16 +11,16 @@ body {
 }
 
 .ball {
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle at 30% 30%, #444, #000); /* adds highlight */
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset -10px -10px 30px rgba(0,0,0,0.8),
-                0 0 40px rgba(0,0,0,0.9);
     position: relative;
+    padding-bottom: 150px;
+}
+
+.ball img {
+    width: 500px;
+    height: auto; 
 }
 
 /* The "window" in the ball */
