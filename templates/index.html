@@ -9,8 +9,6 @@
     <body>
         <p style="color: red">TEST</p>
         <h1>Magic Eight Ball</h1>
-
-
         <div class="ball">
             <div class="inner">
                 <div class="ball-front">
@@ -35,9 +33,21 @@
     <div>
         <form method="post" action="/">
             <input type="text" name="question" placeholder="Type your question" required>
-            <button type="submit">Ask</button>
+            <button type="submit" onclick="shakeAndFlip()">Ask</button>
         </form>
     </div>
 
+    <script>
+        function shakeAndFlip(){
+            const inner = document.querySelector('.inner');
+
+            inner.classList.add('shake');
+
+            setTimeout(() => {
+                inner.classList.remove('shake');
+                inner.style.transform = "rotateY(180deg)";
+            }, 500);
+        }
+    </script>
     </body>
 </html>
