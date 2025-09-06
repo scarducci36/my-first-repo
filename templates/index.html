@@ -9,24 +9,35 @@
     <body>
         <p style="color: red">TEST</p>
         <h1>Magic Eight Ball</h1>
-        <div class="ball">
-            <img src="{{url_for('static', filename='8.png')}}" alt="Magic Eight Ball">
-            <!--<div class="window">
-                <span>
-                {% if answer %}
-                    {{answer}}
-                {% else %}
-                    Ask me anything!
-                {% endif %}
-                </span>
-            </div>-->
-        </div>
 
-        <div>
-            <form method="post" action="/">
-                <input type="text" name="question" placeholder="Type your question" required>
-                <button type="submit">Ask</button>
-            </form>
+
+        <div class="ball">
+            <div class="inner">
+                <div class="ball-front">
+                    <img src="{{url_for('static', filename='8.png')}}" alt="Magic Eight Ball">
+                </div>
+
+            <div class="ball-back">
+                <img src="{{url_for('static', filename='8back.png')}}" alt="Magic Eight Ball">
+                <div class="window">
+                    <span>
+                        {% if answer %}
+                            {{answer}}
+                        {% else %}
+                            Ask me anything!
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
         </div>
+    </div>
+    
+    <div>
+        <form method="post" action="/">
+            <input type="text" name="question" placeholder="Type your question" required>
+            <button type="submit">Ask</button>
+        </form>
+    </div>
+
     </body>
 </html>
