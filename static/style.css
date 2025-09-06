@@ -10,10 +10,11 @@ body {
     text-align: center; 
 }
 
-.title {
+.h1 {
     justify-content: center;
     font-family: 'Times New Roman', Times, serif;
     color: aquamarine;
+    font-size: large;
 }
 
 .ball {
